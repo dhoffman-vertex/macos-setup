@@ -11,7 +11,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/Benjamin.Krein/.oh-my-zsh"
+export ZSH="/Users/David.Hoffman/.oh-my-zsh"
 export PATH="${PATH}:${HOME}/bin:${HOME}/.krew/bin"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -89,30 +89,33 @@ plugins=(
   history
   themes
   fancy-ctrl-z
-  zsh-autosuggestions
+  # zsh-autosuggestions
   history-substring-search
   macos
+  1password
+  customtf
+  custommisc
 )
 
-builtin which -s ansible &>/dev/null && plugins+=(ansible)
-builtin which -s asdf &>/dev/null && plugins+=(asdf)
+#builtin which -s ansible &>/dev/null && plugins+=(ansible)
+#builtin which -s asdf &>/dev/null && plugins+=(asdf)
 builtin which -s aws &>/dev/null && plugins+=(aws)
-builtin which -s brew &>/dev/null && plugins+=(brew mybrew)
+#builtin which -s brew &>/dev/null && plugins+=(brew mybrew)
 builtin which -s docker &>/dev/null && plugins+=(docker)
 builtin which -s direnv &>/dev/null && plugins+=(direnv)
 builtin which -s git &>/dev/null && plugins+=(git git-extras)
-builtin which -s go &>/dev/null && plugins+=(go)
-builtin which -s helm &>/dev/null && plugins+=(helm)
+#builtin which -s go &>/dev/null && plugins+=(go)
+#builtin which -s helm &>/dev/null && plugins+=(helm)
 builtin which -s http &>/dev/null && plugins+=(httpie)
-builtin which -s kubectl &>/dev/null && plugins+=(kubectl customk8s)
-builtin which -s nmap &>/dev/null && plugins+=(nmap)
-builtin which -s op &>/dev/null && plugins+=(1password)
+#builtin which -s kubectl &>/dev/null && plugins+=(kubectl customk8s)
+#builtin which -s nmap &>/dev/null && plugins+=(nmap)
+#builtin which -s op &>/dev/null && plugins+=(1password)
 builtin which -s pip &>/dev/null && plugins+=(pip)
 builtin which -s pyenv &>/dev/null && plugins+=(pyenv)
 builtin which -s python &>/dev/null && plugins+=(python)
 builtin which -s ssh-agent &>/dev/null && plugins+=(ssh-agent)
 builtin which -s terraform &>/dev/null && plugins+=(terraform customtf)
-builtin which -s vagrant &>/dev/null && plugins+=(vagrant)
+#builtin which -s vagrant &>/dev/null && plugins+=(vagrant)
 
 for p in $plugins
 do
@@ -128,7 +131,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
-. /usr/local/opt/asdf/asdf.sh
+#. /usr/local/opt/asdf/asdf.sh
 
 eval "$(pyenv init -)"
 
@@ -137,7 +140,7 @@ CRWCTL_AC_ZSH_SETUP_PATH=/Users/bkrein/Library/Caches/crwctl/autocomplete/zsh_se
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-eval "$(mcfly init zsh)"
+#eval "$(mcfly init zsh)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

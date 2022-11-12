@@ -3,7 +3,7 @@
 [Brewfile](Homebrew/Brewfile) can be applied with the following command:
 
 ```shell
-brew bundle -f Brewfile
+brew bundle --file Brewfile
 ```
 
 ## Resources
