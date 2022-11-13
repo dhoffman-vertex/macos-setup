@@ -82,13 +82,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 plugins=(
+  aws
   colorize
   colored-man-pages
   custommisc
   dircycle
+  direnv
+  docker
+  golang
   history
   themes
   fancy-ctrl-z
+  terraform
   # zsh-autosuggestions
   history-substring-search
   macos
@@ -140,7 +145,7 @@ CRWCTL_AC_ZSH_SETUP_PATH=/Users/bkrein/Library/Caches/crwctl/autocomplete/zsh_se
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-#eval "$(mcfly init zsh)"
+# eval "$(mcfly init zsh)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -169,5 +174,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+alias act='act --secret-file ~/.act/act_secrets'
+
 # Activate direnv
-eval $(direnv hook zsh)
+#eval $(direnv hook zsh)
+
