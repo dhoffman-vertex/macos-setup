@@ -122,11 +122,6 @@ builtin which -s ssh-agent &>/dev/null && plugins+=(ssh-agent)
 builtin which -s terraform &>/dev/null && plugins+=(terraform customtf)
 #builtin which -s vagrant &>/dev/null && plugins+=(vagrant)
 
-for p in $plugins
-do
-  echo "Loading '$p'"
-done
-
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
