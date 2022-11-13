@@ -129,7 +129,10 @@ eval "$(pyenv init --path)"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+if [[ "$(which brew)" != "brew not found" ]]
+then
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+fi
 
 #. /usr/local/opt/asdf/asdf.sh
 
