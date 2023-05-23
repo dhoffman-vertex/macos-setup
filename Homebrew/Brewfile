@@ -131,8 +131,12 @@ cask "slack"
 # cask "the-unarchiver"
 
 # Apple App Store Apps
-# brew "mas"
+brew "mas"
 
 # mas "EasyRes", id: 688211836
 # mas "Hour - World Clock", id: 569089415
+
+mas "DuckDuckGo Private Browser", id: 663592361
+mas "Valet - Car Control and Viewer", id: 1438609932
+mas "Step Two", id: 1448916662
 
